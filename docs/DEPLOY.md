@@ -36,8 +36,8 @@ startCommand: npm start --prefix server
 healthCheckPath: /health
 ```
 
-A opção `starter` evita a suspensão por inatividade do plano gratuito. Você pode
-mudar `plan` no `render.yaml` antes do deploy, se preferir.
+O Blueprint usa `plan: free`, sem cobrança. O plano gratuito pode suspender o
+serviço por inatividade e exigir cold start na próxima abertura.
 
 ## 3. Conferir o deploy
 
@@ -111,7 +111,7 @@ cliente; ele fica apenas no ambiente do servidor.
 - **403 no WebSocket:** o endpoint não veio do join da mesma sessão. Entre
   novamente no jogo em vez de alterar host/port manualmente.
 - **Primeira abertura lenta:** pode ser cold start ou download do wasm. O plano
-  `starter` evita suspensão por inatividade.
+  `free` pode suspender o serviço por inatividade.
 - **Health não responde:** veja os logs do build e confirme que o diretório raiz
   do repositório contém `server/package.json`.
 

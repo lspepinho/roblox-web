@@ -2,7 +2,7 @@ services:
   - type: web
     name: roblox-web
     runtime: node
-    plan: starter
+    plan: free
     buildCommand: npm ci --prefix server
     startCommand: npm start --prefix server
     healthCheckPath: /health

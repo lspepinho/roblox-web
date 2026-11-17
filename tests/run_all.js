@@ -82,6 +82,7 @@ check("Roblox cookie is not persisted by the client", !auth.includes("localStora
 check("expired sessions return to root login", auth.includes("sessionExpired") && auth.includes('url.searchParams.set("login", "1")'));
 const render = fs.readFileSync(path.join(root, "render.yaml"), "utf8");
 check("Render has health check", render.includes("healthCheckPath: /health"));
+check("Render uses the free plan", /^    plan: free$/m.test(render));
 
 console.log(failures ? `\n${failures} FAILED` : "\nall harnesses passed");
 process.exit(failures ? 1 : 0);
