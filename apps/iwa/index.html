@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Roblox</title>
+<style>
+  html,body{margin:0;height:100%;background:#000;overflow:hidden}
+  #canvas{width:100vw;height:100vh;display:block;outline:none}
+  #input-container{position:absolute;left:0;top:0;width:0;height:0;overflow:hidden}
+  #input-input,#input-textarea{position:absolute;opacity:0}
+</style>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <div id="input-container"><textarea id="input-textarea"></textarea><input id="input-input"></div>
+
+  <!-- elements the loader touches; hidden, never used by us -->
+  <div id="loading-overlay" style="display:none">
+    <div id="loading-icon-shell"></div>
+    <div id="loading-background-image"></div>
+    <div id="loading-experience-title"></div>
+    <div id="loading-experience-creator"></div>
+    <img id="loading-experience-icon" alt="">
+    <span id="loading-verified-badge"></span>
+    <button id="loading-cancel">cancel</button>
+    <div id="loading-error-title"></div>
+    <div id="loading-error-message"></div>
+    <div id="loading-error-code"></div>
+    <button id="loading-error-leave">leave</button>
+  </div>
+  <div id="status" style="display:none"></div>
+  <div id="server" style="display:none"></div>
+  <div id="proxyenabled" style="display:none"></div>
+
+  <script src="/diagnostics.js"></script>
+  <script src="/boot.js"></script>
+  <script src="/abi.js"></script>
+  <script src="/rbx-net.js"></script>
+  <script src="/rupp.js"></script>
+  <script src="/ring.js"></script>
+  <script src="/auth.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

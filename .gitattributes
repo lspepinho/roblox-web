@@ -1,0 +1,3 @@
+# js_fetch_file validates each asset's byteLength against the metadata.
+# Never convert these files to CRLF on checkout.
+apps/iwa/engine/** -text

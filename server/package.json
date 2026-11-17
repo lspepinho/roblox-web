@@ -1,0 +1,17 @@
+{
+  "name": "roblox-web-server",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "node --test test/*.test.js",
+    "hash": "node tools/hash-credentials.js"
+  },
+  "dependencies": {
+    "ws": "^8.18.0"
+  }
+}

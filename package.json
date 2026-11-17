@@ -1,0 +1,9 @@
+{
+  "name": "roblox-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm start --prefix server",
+    "test": "npm test --prefix server && node tests/run_all.js"
+  }
+}

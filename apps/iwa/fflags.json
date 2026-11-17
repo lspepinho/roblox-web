@@ -1,0 +1,6 @@
+{
+  "DFIntDebugFRMQualityLevelOverride": "1",
+  "DFIntTaskSchedulerTargetFps": "240",
+  "FIntDebugForceMSAASamples": "0",
+  "FIntDebugTextureManagerSkipMips": "4"
+}
